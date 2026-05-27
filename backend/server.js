@@ -89,7 +89,7 @@ app.delete(`${BASE_URL}/:id`, async(req, res) =>{
     try{
         const {id} = req.params;
 
-        await pool.query("DELETE FROM produto WHERE id=$1", [id]);
+        await pool.query("DELETE FROM produtos WHERE id=$1", [id]); // <-- corrigir aqui
         res.json({ message: "Produto removido com sucesso!"});
     }catch(err){
         res.status(500).json({ error: "Erro ao remover produto"});

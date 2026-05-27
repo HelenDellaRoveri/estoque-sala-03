@@ -1,0 +1,129 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Fonte e fundo geral */
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f4f6f9, #e9eef5);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Container principal */
+  #root {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 20px;
+  }
+  
+  /* Título */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  /* Formulário */
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    min-width: 150px;
+    transition: 0.3s ease;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.3);
+  }
+  
+  /* Botões */
+  button {
+    padding: 10px 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #357abd;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  thead {
+    background-color: #4a90e2;
+    color: white;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f6fc;
+  }
+  
+  tbody tr:hover {
+    background-color: #e6f0ff;
+  }
+  
+  /* Botão excluir */
+  td button {
+    background-color: #e74c3c;
+  }
+  
+  td button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 600px) {
+    form {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    input,
+    button {
+      width: 100%;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  }
